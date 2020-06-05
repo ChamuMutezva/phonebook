@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ChamuMutezva/phonebook/static/css/main.d1b05096.chunk.css",
+    "main.js": "/ChamuMutezva/phonebook/static/js/main.4720e932.chunk.js",
+    "main.js.map": "/ChamuMutezva/phonebook/static/js/main.4720e932.chunk.js.map",
+    "runtime-main.js": "/ChamuMutezva/phonebook/static/js/runtime-main.725b7c85.js",
+    "runtime-main.js.map": "/ChamuMutezva/phonebook/static/js/runtime-main.725b7c85.js.map",
+    "static/js/2.8e6fed29.chunk.js": "/ChamuMutezva/phonebook/static/js/2.8e6fed29.chunk.js",
+    "static/js/2.8e6fed29.chunk.js.map": "/ChamuMutezva/phonebook/static/js/2.8e6fed29.chunk.js.map",
+    "index.html": "/ChamuMutezva/phonebook/index.html",
+    "precache-manifest.0d1919661017047960594aa1d761ecaf.js": "/ChamuMutezva/phonebook/precache-manifest.0d1919661017047960594aa1d761ecaf.js",
+    "service-worker.js": "/ChamuMutezva/phonebook/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/ChamuMutezva/phonebook/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.8e6fed29.chunk.js.LICENSE.txt": "/ChamuMutezva/phonebook/static/js/2.8e6fed29.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/ChamuMutezva/phonebook/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.725b7c85.js",
+    "static/js/2.8e6fed29.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.4720e932.chunk.js"
+  ]
+}
