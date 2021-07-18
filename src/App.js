@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Phonebook from './Phonebook';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
 const App = () => {
-  const [persons, setPersons] = useState([
-    { id: 0, name: 'Arto Hellas', phone: '+27832678210' }
-  ])
+  const [persons, setPersons] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    console.log("effect")
+    axios
+    .get('http://localhost:3001/persons')
+    .then(response => {
+      console.log('promise fulfilled')
+      setPersons(response.data)
+    })
+  }, [])
 
   const filterData = (event) => {
     console.log(event.target.value);
@@ -16,14 +24,15 @@ const App = () => {
   }
 
   const filterResults = persons.filter(person => {
-      if (person.name.includes(searchTerm)) {
-        console.log(person);
-        // return person;       
-        console.log(person.name, person.phone);
-        return <h4 key={person.id}>  name={person.name} phone={person.phone} </h4>
-      }
-      return null
-    })
+  /* if (person.name.includes(searchTerm)) {
+      console.log(person);            
+     // console.log(person.name, person.phone);
+      return <h4 key={person.id}>  name={person.name} phone={person.phone} </h4>
+    }
+    return null*/
+    return person.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
+  .map(person => <h4 key={person.id}>  {person.name} : {person.phone} </h4>)
 
 
 
@@ -41,8 +50,9 @@ const App = () => {
         }
       </div>
       <div>
-        {searchTerm}
-        {filterResults}
+        {searchTerm} 
+        <h5>Filtered results</h5>
+        {filterResults} 
       </div>
     </div>
   )
